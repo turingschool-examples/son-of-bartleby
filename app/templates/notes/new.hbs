@@ -1,0 +1,21 @@
+<h1>{{title}}</h1>
+
+<div class="note-body">
+  {{body}}
+</div>
+
+<div class="well">
+  <div class="panel panel-default">
+  <div class="panel-body">
+    <div class="form-group">
+      <label>Title</label>
+      {{input type="text" value=title class="form-control"}}
+    </div>
+    <div class="form-group">
+      <label>Body</label>
+      {{textarea value=body class="form-control"}}
+    </div>
+  </div>
+  </div>
+
+  <button class="btn btn-default" {{action 'addNote'}}>Add Note</button>

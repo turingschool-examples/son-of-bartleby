@@ -1,0 +1,20 @@
+<div class="row">
+
+  <div class="col-md-4">
+    {{numberOfNotes}} notes
+    <div class="list-group">
+      {{#each}}
+      {{#link-to 'note' this class="list-group-item"}}
+        <h4 class="list-group-item-heading">{{title}}</h4>
+        <p class="list-group-item-text">{{body}}</p>
+      {{/link-to}}
+      {{/each}}
+    </div>
+    {{#link-to 'notes.new' class="btn btn-primary"}}New Note{{/link-to}}
+  </div>
+
+  <div class="col-md-8">
+    {{outlet}}
+  </div>
+
+</div>
